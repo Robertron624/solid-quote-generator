@@ -13,7 +13,6 @@ main {
 .wrapper {
   background-color: var(--darkish-blue);
   height: 250px;
-  width: 90%;
   max-width: 40rem;
   border-radius: 10px;
   padding: 2rem;
@@ -52,4 +51,31 @@ main {
   text-align: center;
   font-size: 1.5rem;
   color: var(--light-grayish-blue);
+}
+
+.controls {
+  max-width: 40rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  --border-radius: 15px;
+}
+
+.controls button{
+  background-color: transparent;
+  border: 1.5px solid var(--gray);
+  padding: .8rem 1rem;
+  display: flex;
+  align-items: center;
+
+}
+
+.controls .random {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.controls .copy {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }

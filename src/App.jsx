@@ -1,34 +1,43 @@
 import { createSignal } from "solid-js";
-import solidLogo from "./assets/solid.svg";
-import viteLogo from "/vite.svg";
+import { RandomButton, CopyButton } from "./Buttons.jsx";
 import "./App.css";
 
 function App() {
-    const [count, setCount] = createSignal(0);
 
-    // doubled is a derived signal that updates whenever count changes
-    const doubledCount = () => count() * 2;
+    const [quote, setQuote] = createSignal("");
+
+    const handleCopyToClipboard = () => {
+        navigator.clipboard.writeText(quote());
+    };
+
+    const handleGetRandomQuote = () => {};
+
 
     return (
         <>
             <main>
-                <div className="wrapper">
-                  <div className="top">
-                    <p className="author">
-                      George Bernard Shaw
-                    </p>
-                    <div className="categories">
-                      <p>
-                        Famous Quotes
+                <div className="main-container">
+                  <div className="wrapper">
+                      <div className="top">
+                          <p className="author">George Bernard Shaw</p>
+                          <div className="categories">
+                              <p>Famous Quotes</p>
+                              <p>Inspirational</p>
+                          </div>
+                      </div>
+                      <p className="quote">
+                          "Learn from yesterday, live for today, hope for
+                          tomorrow."
                       </p>
-                      <p>
-                        Inspirational
-                      </p>
-                    </div>
                   </div>
-                  <p className="quote">
-                    "Learn from yesterday, live for today, hope for tomorrow."
-                  </p>
+                  <div className="controls">
+                      <button onClick={handleGetRandomQuote} id="random" className="random">
+                        <RandomButton />
+                      </button>
+                      <button onClick={handleCopyToClipboard} id="copy" className="copy">
+                        <CopyButton />
+                      </button>
+                  </div>
                 </div>
             </main>
         </>
