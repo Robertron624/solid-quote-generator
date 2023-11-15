@@ -1,114 +1,55 @@
-
-/* fonts (Outfit)*/
-
-@font-face {
-  font-family: "Outfit";
-  src: url("./assets/fonts/Outfit-Medium.ttf");
-  font-weight: 500;
-  font-style: normal;
+#root {
+  width: 100%;
+  height: 100vh;
+  color: white;
 }
 
-@font-face {
-  font-family: "Outfit";
-  src: url("./assets/fonts/Outfit-SemiBold.ttf");
-  font-weight: 600;
-  font-style: normal;
+main {
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
-@font-face {
-  font-family: "Outfit";
-  src: url("./assets/fonts/Outfit-Bold.ttf");
-  font-weight: 700;
-  font-style: normal;
+.wrapper {
+  background-color: var(--darkish-blue);
+  height: 250px;
+  width: 90%;
+  max-width: 40rem;
+  border-radius: 10px;
+  padding: 2rem;
+  background-image: url(./bg-image-random-quote.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
 }
 
-/* root vars */
-
-:root {
-  --violet: #6466E9;
-  --darkish-blue: #20293A;
-  --dark-blue: #111729;
-  --darkest-blue: #97A3B;
-  --gray: #4A5567;
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
 }
 
-
-/* CSS resets */
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.author {
+  font-size: 1.3rem;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
+.categories {
+  display: flex;
+  gap: 1rem;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
+.categories p {
+  font-size: .8rem;
+  color: var(--violet);
+  border: 1px solid var(--violet);
+  padding: .2rem 1rem;
+  border-radius: 20px;
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  font-family: "Outfit", sans-serif;
-
-  background-color: var(--dark-blue);
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.quote {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--light-grayish-blue);
 }

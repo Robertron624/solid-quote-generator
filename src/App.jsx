@@ -1,21 +1,38 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createSignal } from "solid-js";
+import solidLogo from "./assets/solid.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = createSignal(0)
+    const [count, setCount] = createSignal(0);
 
-  // doubled is a derived signal that updates whenever count changes
-  const doubledCount = () => count() * 2
+    // doubled is a derived signal that updates whenever count changes
+    const doubledCount = () => count() * 2;
 
-  return (
-    <>
-      <h1>
-        Quote generator!
-      </h1>
-    </>
-  )
+    return (
+        <>
+            <main>
+                <div className="wrapper">
+                  <div className="top">
+                    <p className="author">
+                      George Bernard Shaw
+                    </p>
+                    <div className="categories">
+                      <p>
+                        Famous Quotes
+                      </p>
+                      <p>
+                        Inspirational
+                      </p>
+                    </div>
+                  </div>
+                  <p className="quote">
+                    "Learn from yesterday, live for today, hope for tomorrow."
+                  </p>
+                </div>
+            </main>
+        </>
+    );
 }
 
-export default App
+export default App;
