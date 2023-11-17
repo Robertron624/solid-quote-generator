@@ -12,7 +12,6 @@ main {
 
 .wrapper {
   background-color: var(--darkish-blue);
-  height: 250px;
   max-width: 40rem;
   border-radius: 10px;
   padding: 2rem;
@@ -31,6 +30,7 @@ main {
 
 .author {
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .categories {
@@ -38,7 +38,7 @@ main {
   gap: 1rem;
 }
 
-.categories p {
+.categories li {
   font-size: .8rem;
   color: var(--violet);
   border: 1px solid var(--violet);
